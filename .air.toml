@@ -1,0 +1,22 @@
+# Config file for Air
+[build]
+# Command to build the Go application
+cmd = "go build -o ./tmp/main ./cmd/main.go"
+# Binary file to run
+bin = "./tmp/main"
+# Clean up the binary after stopping
+clean = true
+# Include file extensions to watch
+include_ext = ["go", "tpl", "tmpl", "html"]
+# Exclude directories from watching
+exclude_dir = ["assets", "tmp", "vendor"]
+# Exclude specific files from watching
+exclude_file = [".air.toml"]
+# Working directory
+dir = "."
+# Log file
+log = "air.log"
+# Number of milliseconds to wait before restarting the application
+delay = 200
+# Number of milliseconds to wait before killing the application
+kill_delay = 200

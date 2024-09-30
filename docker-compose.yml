@@ -1,0 +1,9 @@
+services:
+  auth:
+    image: ghcr.io/jeauchter/adjutor-base-images/golang-with-air:latest
+    container_name: go_auth_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    entrypoint: /app/entrypoint.sh
